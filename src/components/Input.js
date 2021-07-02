@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
-import './Input.css'
+import './Input.css';
+
+import { useDispatch } from 'react-redux';
+import { saveTodo } from '../features/todoSlice';
 
 function Input() {
     const [Input, setInput] = useState('')
+    const dispatch = useDispatch()
     const addTodo = () =>{
+        console.log(`Adding ${Input}`)
+
+        dispatch(saveTodo({
+           item: Input,
+           done: false,
+           done: Date.now()
+        }))
     }
     return (
         <div className="input">
