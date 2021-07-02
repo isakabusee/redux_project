@@ -9,7 +9,7 @@ function Input() {
         <div className="input">
             <input type="text" value={Input} onChange={e=>setInput(e.target.value)}/>
             <button onClick={addTodo}>Add!</button>
-            
+
         </div>
     )
 }
