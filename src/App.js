@@ -21,15 +21,15 @@ function App() {
             {
               todoList.map(item => {
                 <TodoItem 
-                  name={item.item}
-                  done={item.done}
-                  id ={item.id}
+                name={item.item}
+                done={item.done}
+                id={item.id}
                 />
-})
+              })
             }
         </div>
-        
         <Input />
+        <TodoItem />
 
       </div>
         <h1>Hello world!</h1>
