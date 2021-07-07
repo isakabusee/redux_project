@@ -13,7 +13,7 @@ function Input() {
         dispatch(saveTodo({
            item: Input,
            done: false,
-           done: Date.now()
+           id: Date.now()
         }))
     }
     return (
