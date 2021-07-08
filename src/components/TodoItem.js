@@ -17,6 +17,9 @@ const TodoItem = ({ name, done, id}) => {
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
         />
             <p className={done && 'todoItem--done'}>{name}</p>
+            <div className="trial">
+                <h1>{name}</h1>
+            </div>
             
         </div>
     )
