@@ -20,6 +20,10 @@ const TodoItem = ({ name, done, id}) => {
             <div className="trial">
                 <h1>{name}</h1>
             </div>
+            {/* <dv class="block">
+                ...
+                <span class="block__elem"></span>
+            </dv> */}
             
         </div>
     )
