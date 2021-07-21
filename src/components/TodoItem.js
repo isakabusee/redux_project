@@ -3,11 +3,19 @@ import './TodoItem.css'
 
 import { Checkbox } from '@material-ui/core';
 
+import { useDispatch } from 'react-redux';
+import { setCheck } from '../features/todoSlice';
+
 const handleCheck=()=>{
 
 }
 
 const TodoItem = ({ name, done, id}) => {
+    const dispatch = useDispatch()
+
+    const handleCheck = () => {
+        dispatch(setCheck(id))
+    }
     return (
         <div className="todoItem">
             <Checkbox
@@ -17,14 +25,6 @@ const TodoItem = ({ name, done, id}) => {
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
         />
             <p className={done && 'todoItem--done'}>{name}</p>
-            <div className="trial">
-                <h1>{name}</h1>
-            </div>
-            {/* <dv class="block">
-                ...
-                <span class="block__elem"></span>
-            </dv> */}
-            
         </div>
     )
 }

@@ -2,19 +2,23 @@ import React from 'react';
 import './App.css';
 import Input from './components/Input';
 import TodoItem from './components/TodoItem';
+
+import { useSelector } from 'react-redux'
+import { selectTodoList } from './features/todoSlice'
 // import Data from "./Data"
 
-const todoList = [{
-  item: 'todo',
-  done: false,
-  id: 63454674674
-}, {
-  item: 'todo2',
-  done: true,
-  id: 777777777
-}]
+// const todoList = [{
+//   item: 'todo',
+//   done: false,
+//   id: 63454674674
+// }, {
+//   item: 'todo2',
+//   done: true,
+//   id: 777777777
+// }]
 
 function App() {
+  const todoList = useSelector(selectTodoList)
   return (
     <div className="App">
       <div className="app_container">
@@ -31,7 +35,7 @@ function App() {
         </div>
         
         <Input />
-        <TodoItem />
+        {/* <TodoItem /> */}
             {/* there's a problem rendering! Revisit! */}
       </div>
         <h1>Hello world!</h1>
