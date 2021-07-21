@@ -16,11 +16,15 @@ const Input =() => {
            id: Date.now()
         }))
     }
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setInput("")
+        // setting the default value
+    }
     return (
         <div className="input">
-            <input type="text" value={input} onChange={e=>setInput(e.target.value)}/>
+            <input type="text" value={input} onChange={e=>setInput(e.target.value)} placeholder="Type your tasks here.."/>
             <button onClick={addTodo}>Add!</button>
-
         </div>
     )
 }
