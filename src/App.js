@@ -21,6 +21,8 @@ function App() {
   const todoList = useSelector(selectTodoList)
   return (
     <div className="App">
+      <h1>Daily Chores/Tasks List</h1>
+      <h2>Make your list and check them when completed</h2>
       <div className="app_container">
         <div className="app_todoContainer">
             {
@@ -38,9 +40,9 @@ function App() {
         {/* <TodoItem /> */}
             {/* there's a problem rendering! Revisit! */}
       </div>
-        <h1>Hello world!</h1>
-        {/* todo list */}
-        {/*  done */}
+        
+        <h4>Created by Isaac Busee</h4>
+        
     </div>
   );
 }

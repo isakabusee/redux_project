@@ -9,17 +9,13 @@ const Input =() => {
     const dispatch = useDispatch()
     const addTodo = () =>{
         console.log(`Adding ${input}`)
+        setInput("")
 
         dispatch(saveTodo({
            item: input,
            done: false,
            id: Date.now()
         }))
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault()
-        setInput("")
-        // setting the default value
     }
     return (
         <div className="input">
