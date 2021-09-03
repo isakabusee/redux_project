@@ -22,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <h1>Daily Chores/Tasks List</h1>
-      <h2>Make your list and check them when completed</h2>
+      <h2>Make your list of tasks and cross them out when completed</h2>
       <div className="app_container">
         <div className="app_todoContainer">
             {
